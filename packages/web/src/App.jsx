@@ -10,7 +10,7 @@ function App() {
 
   const isLoggedIn = window.localStorage.getItem("isLoggedIn");
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
     <NavBar/>
       <Routes path='/'>
           <Route path='/' element={<HomePage/>}>
