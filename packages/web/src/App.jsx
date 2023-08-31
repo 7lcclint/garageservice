@@ -9,18 +9,16 @@ import CustomerProfile from './components/customers/CustomerProfile'
 function App() {
 
   const isLoggedIn = window.localStorage.getItem("isLoggedIn");
-  const isDeployedInSubdirectory = window.location.pathname !== '/';
 
   return (
-    <BrowserRouter basename={isDeployedInSubdirectory ? window.location.pathname : '/'}>
+    <BrowserRouter>
     <NavBar/>
-      <Routes path='/'>
-          <Route path='/' element={<HomePage/>}>
+      <Routes>
+          <Route path='/' element={<HomePage/>}></Route>
           <Route path='login' element={isLoggedIn ? <HomePage/> : <Login />}></Route>
-          <Route path='signup' element={<SignUp/>}></Route>
+          <Route path='sigup' element={<SignUp/>}></Route>
           <Route path='home' element={<HomePage/>}></Route>
           <Route path='user/:activepage' element={isLoggedIn ? <CustomerProfile/> : <Login />}></Route>
-        </Route>
       </Routes>
     </BrowserRouter>
   )
