@@ -12,7 +12,7 @@ function App() {
   return (
     <BrowserRouter>
     <NavBar/>
-      <Routes>
+      <Routes path='/'>
           <Route path='/' element={<HomePage/>}>
           <Route path='login' element={isLoggedIn ? <HomePage/> : <Login />}></Route>
           <Route path='signup' element={<SignUp/>}></Route>
