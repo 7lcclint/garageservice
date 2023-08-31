@@ -9,8 +9,10 @@ import CustomerProfile from './components/customers/CustomerProfile'
 function App() {
 
   const isLoggedIn = window.localStorage.getItem("isLoggedIn");
+  const isDeployedInSubdirectory = window.location.pathname !== '/';
+
   return (
-    <BrowserRouter basename={import.meta.env.BASE_URL}>
+    <BrowserRouter basename={isDeployedInSubdirectory ? window.location.pathname : '/'}>
     <NavBar/>
       <Routes path='/'>
           <Route path='/' element={<HomePage/>}>
