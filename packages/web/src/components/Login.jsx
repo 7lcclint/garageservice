@@ -12,11 +12,6 @@ function Login() {
   const errRef = useRef();
   const [user, setUser] = useState('');
   const [pwd, setPwd] = useState('');
-  /* const [fName, setFName] = useState('');
-  const [lName, setLName] = useState('');
-  const [address, setAddress] = useState('');
-  const [phone, setPhone] = useState('');
-  const [img, setImg] = useState(''); */
   const [errMsg, setErrMsg] = useState('');
 
   useEffect(() => {
@@ -97,7 +92,7 @@ function Login() {
                 </div>
                 <button type='submit' className='btnSubmit'>Login</button>
                 <p>You are agree to your terms and  policies </p>
-                <Link to="/signup" className='btnCreateAccount'>Create Account</Link>
+                <Link to="/" className='btnCreateAccount'>Create Account</Link>
               </form>
             </div>
           </div>

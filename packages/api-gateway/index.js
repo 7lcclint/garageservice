@@ -11,7 +11,7 @@ const app = express();
 const port = 3456;
 
 app.use(cors({
-  origin: 'http://localhost:5173',
+  origin: ['http://localhost:5173','https://garagesystem.netlify.app'],
   credentials: true,
 }));
 
