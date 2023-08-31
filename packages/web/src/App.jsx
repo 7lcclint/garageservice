@@ -17,7 +17,6 @@ function App() {
           <Route path='login' element={isLoggedIn ? <HomePage/> : <Login />}></Route>
           <Route path='signup' element={<SignUp/>}></Route>
           <Route path='home' element={<HomePage/>}></Route>
-          <Route path='/' element={<HomePage/>}></Route>
           <Route path='user/:activepage' element={isLoggedIn ? <CustomerProfile/> : <Login />}></Route>
         </Route>
       </Routes>
