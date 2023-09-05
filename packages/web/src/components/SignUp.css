@@ -65,8 +65,6 @@
     --col4: #F26F21;
 }
   
-
-
 .stylenone{
     text-decoration: none;
     color: inherit;
@@ -91,8 +89,7 @@
     cursor: pointer;
     color: var(--col4);
 }
-  
-  
+
 .mainbutton1:hover {
     background-color: var(--col4);
     color: white;
@@ -100,10 +97,11 @@
     transition: all 0.6s ease-in-out;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 
 input[type="email"],
-input[type="password"],
+input[type="password"], */
+
 button,
 textarea {
   font-family: 'Nunito', sans-serif;

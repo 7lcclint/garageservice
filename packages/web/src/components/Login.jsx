@@ -66,7 +66,7 @@ function Login() {
           <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
           <div className='bg'>
             <div className='setForm'>
-            <h2>Sign In</h2>
+            <h2 className='txtSig'>Sign In</h2>
               <form action="" onSubmit={handleSubmit}>
                 <div className='mb-3'>
                   <label htmlFor="email"><strong>Email</strong></label>
@@ -92,7 +92,7 @@ function Login() {
                 </div>
                 <button type='submit' className='btnSubmit'>Login</button>
                 <p>You are agree to your terms and  policies </p>
-                <Link to="/" className='btnCreateAccount'>Create Account</Link>
+                <Link to="/signUp" className='btnCreateAccount'>Create Account</Link>
               </form>
             </div>
           </div>

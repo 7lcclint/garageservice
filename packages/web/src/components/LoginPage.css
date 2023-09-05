@@ -1,9 +1,14 @@
 .bg{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: lightgray;
     height: 100vh;
+}
+
+.txtSig{
+    text-align: center;
 }
 
 .setForm{

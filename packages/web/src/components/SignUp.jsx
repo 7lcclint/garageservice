@@ -79,29 +79,10 @@ function SignUp() {
       } else {
         setErrMsg('Registration Failed');
       }
-      /* console.log(response.data);
-      console.log(response.accessToken);
-      console.log(JSON.stringify(response));
-      setSuccess(true);
-
-      setUser('');
-      setPwd('');
-      setMatchPwd('');
-      setFName('');
-      setLName('') */
     } catch (err) {
       setErrMsg(err.message || 'Registration Failed');
       errRef.current.focus();
-    }/* catch (err){
-      if (!err?.response) {
-        setErrMsg('No Server Response');
-      } else if (err.response?.status === 409) {
-        setErrMsg('Username Taken');
-      } else {
-        setErrMsg('Registration Failed')
-      }
-      errRef.current.focus();
-    } */
+    }
   }
 
   return (
@@ -113,7 +94,7 @@ function SignUp() {
           <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
           <div className='bg'>
             <div className='setForm'>
-              <h2>Sign Up</h2>
+              <h2 className='txtSig'>Sign Up</h2>
               <form action="" onSubmit={handleSubmit}>
                 <div className='mb-3'>
                   <label htmlFor="fname"><strong>First Name</strong></label>
@@ -124,19 +105,19 @@ function SignUp() {
                       onChange={(e) => setFName(e.target.value)}
                       value={fName}
                       required
-                      className='form-control rounded-1'/>
+                      className='form-control rounded-0'/>
                 </div>
                 
                 <div className='mb-3'>
                   <label htmlFor="lname"><strong>Last Name</strong></label>
-                  <input 
+                  <input
                       type="text" 
                       placeholder='Enter Last Name' 
                       id='lname'
                       onChange={(e) => setLName(e.target.value)}
                       value={lName}
                       required
-                      className='form-control rounded-1'/>
+                      className='form-control rounded-0'/>
                 </div>
 
                 <div className='mb-3'>
