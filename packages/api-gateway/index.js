@@ -11,7 +11,7 @@ const app = express();
 const port = 5000;
 
 app.use(cors({
-  origin: ['http://localhost:5173','*.vercel.app','https://garagesystem.netlify.app'],
+  origin: ['http://localhost:5174','*.vercel.app','https://garagesystem.netlify.app'],
   credentials: true,
 }));
 
@@ -67,7 +67,7 @@ app.get('/fetchreserve', (req, res) => {
       console.error(err);
       res.status(500).json({ error: 'An error occurred' });
     } else {
-      res.json(results);
+      res.send(results);
     }
   });
 });
