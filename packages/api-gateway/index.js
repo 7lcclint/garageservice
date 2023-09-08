@@ -120,6 +120,7 @@ app.post('/logedIn', (req, res) => {
           userType: user.userType
         }
         res.send(dataUser);
+        console.log("trying logged")
         return result
       }else{
         res.json("Failed");
