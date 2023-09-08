@@ -119,7 +119,7 @@ app.post('/logedIn', (req, res) => {
           imgProfile: user.imgProfile,
           userType: user.userType
         }
-        res.json(dataUser);
+        res.send(dataUser);
         return result
       }else{
         res.json("Failed");
