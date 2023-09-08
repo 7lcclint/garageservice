@@ -16,9 +16,9 @@ app.use(cors({
 }));
 
 const con = mysql.createConnection({
-  host: "127.0.0.1",
+  host: "34.143.179.46",
   user: "root",
-  password: "Korn_pakorn00",
+  password: "1234",
   port: 3306
 });
 
@@ -35,11 +35,10 @@ try {
 }
 
 app.get('/', (req, res) => {
-  const query = 'SELECT * FROM world.city,world.country,world.countrylanguage LIMIT 0, 10;';
   con.query(query, (err, result) => {
     if(err) throw err;
-    res.json(result)
-    console.log(result)
+    res.json("hello world")
+    console.log("hello world")
   })
 })
 

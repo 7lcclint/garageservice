@@ -19,7 +19,6 @@ export function UserProvider({ children }) {
       {children}
     </UserContext.Provider>
   );
-  
 }
 UserProvider.propTypes = {
     children: PropTypes.node.isRequired,
