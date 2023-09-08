@@ -26,7 +26,7 @@ function Login() {
     e.preventDefault();
 
     try {
-      const response = await fetch('http://localhost:5000/logedIn', {
+      const response = await fetch('https://garageservice-api.vercel.app/logedIn', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
