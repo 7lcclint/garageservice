@@ -8,7 +8,7 @@ const jwt = require('jsonwebtoken');
 console.log('Generated Secret Key:', secretKey);
 
 const app = express();
-const port = 3456;
+const port = 5000;
 
 app.use(cors({
   origin: ['http://localhost:5173','https://garagesystem.netlify.app'],
@@ -34,13 +34,9 @@ try {
 	console.error(`Error occurred: ${error.message}`);
 }
 
-app.get('/', (req, res) => {
-  con.query(query, (err, result) => {
-    if(err) throw err;
-    res.json("hello world")
-    console.log("hello world")
-  })
-})
+app.get("/", (req, res) => {
+  res.send("Express on Vercel");
+});
 
 app.post('/register', (req, res) => {
   const {fname, lname, email, password} = req.body;
@@ -123,3 +119,5 @@ app.post('/logedIn', (req, res) => {
     }
   });
 });
+
+module.exports = app;
