@@ -35,7 +35,15 @@ try {
 }
 
 app.get("/", (req, res) => {
-  res.send("Express on Vercel");
+  const query = 'SELECT * FROM garage.reserve';
+  con.query(query, (err, results) => {
+    if (err) {
+      console.error(err);
+      res.status(500).json({ error: 'An error occurred' });
+    } else {
+      res.json(results);
+    }
+  });
 });
 
 app.post('/register', (req, res) => {
